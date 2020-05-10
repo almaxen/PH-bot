@@ -1,0 +1,14 @@
+[Unit]
+Description=myBot
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/alisa/heroku/my_env/PH-bot/venv/
+ExecStart=/home/alisa/heroku/my_env/PH-bot/venv/myBot.py
+KillMode=process
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
