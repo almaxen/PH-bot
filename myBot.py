@@ -3,9 +3,11 @@
 
 import config
 import telebot
+import logging
+import telegram
 from telebot import types
 
-token = '1194351305:AAE-FFvnKn7pFO8FLKN0ajtYd0PlAkzJWDY'
+token = '1194351305:AAGZdRZJF97JXCbvIJY9tsZcPO__nJSOYf0'
 bot = telebot.TeleBot(config.token)
 
 @bot.message_handler(commands=['enter'])
