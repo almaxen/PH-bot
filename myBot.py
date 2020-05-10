@@ -31,7 +31,7 @@ def command_enter(message):
     markup.add(button1, button2, button3, button4, button5)
 
 
-@bot.callback_query_handler(func=lambda call:True)
+@bot.callback_query_handler(func=lambda call: True)
 def callback_worker(call):
     try:
         if call.message:
@@ -55,7 +55,7 @@ if "HEROKU" in list(os.environ.keys()):
 
     server = Flask(__name__)
 
-    @server.route('/' + bot, methods=['POST'])
+    @server.route('/bot', methods=['POST'])
     def getMessage():
         bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
         return "!", 200

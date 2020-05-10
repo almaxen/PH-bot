@@ -1,1 +1,1 @@
-web: python myBot.py
+web: python myBot.py $PORT
